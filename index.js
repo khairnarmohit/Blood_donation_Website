@@ -14,7 +14,7 @@ app.use(session({
     secret: 'blood_donation_secret_key',
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 1000 * 60 * 60 * 24 } // 24 hours
+    cookie: { maxAge: 3000 * 60 * 60 * 24 } // 24 hours
 }));
 
 app.use(express.static("public/"));
@@ -26,7 +26,7 @@ app.use(express.static("public"));
 app.use("/", userRouter);
 app.use("/admin", adminRouter);
 
-app.listen(1000);
+app.listen(3000);
 
 
 
